@@ -21,14 +21,14 @@ public class BaseApplicationConfiguration {
     }
 
     @Controller
-    class BaseControllerBean extends BaseController {
+    static class BaseControllerBean extends BaseController {
         public BaseControllerBean(final MessageRepository messageRepository) {
             super(messageRepository);
         }
     }
 
     @Repository
-    class MessageRepositoryBean extends MessageRepositoryImpl {
+    static class MessageRepositoryBean extends MessageRepositoryImpl {
         public MessageRepositoryBean(final NamedParameterJdbcTemplate jdbcTemplate) {
             super(jdbcTemplate);
         }
