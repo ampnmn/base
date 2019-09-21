@@ -12,7 +12,7 @@ import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 
 public class MessageRepositoryImpl implements MessageRepository {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(MessageRepositoryImpl.class);
+    private final Logger logger = LoggerFactory.getLogger(MessageRepositoryImpl.class);
 
     private final NamedParameterJdbcTemplate jdbcTemplate;
 
@@ -32,7 +32,7 @@ public class MessageRepositoryImpl implements MessageRepository {
         } catch (EmptyResultDataAccessException e) {
             return null;
         } catch (DataAccessException e) {
-            LOGGER.error("DataAccessError!!!");
+            logger.error("DataAccessError!!!");
             return null;
         }
     }
