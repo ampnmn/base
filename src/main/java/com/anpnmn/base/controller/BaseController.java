@@ -10,7 +10,7 @@ public class BaseController {
 
     private final MessageRepository messageRepository;
 
-    public BaseController(final MessageRepository messageRepository) {
+    public BaseController(MessageRepository messageRepository) {
         this.messageRepository = messageRepository;
     }
 

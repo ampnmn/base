@@ -16,7 +16,7 @@ public class MessageRepositoryImpl implements MessageRepository {
 
     private final NamedParameterJdbcTemplate jdbcTemplate;
 
-    public MessageRepositoryImpl(final NamedParameterJdbcTemplate jdbcTemplate) {
+    public MessageRepositoryImpl(NamedParameterJdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 
